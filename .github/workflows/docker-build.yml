@@ -9,10 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # Add permissions at the job level
     permissions:
-      contents: read  # Needed to checkout the repository
-      packages: write # Needed to push packages to GHCR
+      contents: read
+      packages: write
 
     steps:
     - name: Checkout repository
@@ -33,4 +32,5 @@ jobs:
       with:
         context: .
         push: true
-        tags: ghcr.io/${{ github.repository }}:latest
+        # Convert the repository name to lowercase
+        tags: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name.toLowerCase() }}:latest
