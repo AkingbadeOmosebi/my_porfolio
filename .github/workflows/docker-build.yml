@@ -28,5 +28,5 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         context: .
-        push: yaml  # change to true if you want to push to GHCR
+        push: "true"  # change to true if you want to push to GHCR
         tags: ghcr.io/${{ github.repository }}:latest
