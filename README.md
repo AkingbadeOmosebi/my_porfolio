@@ -8,6 +8,8 @@ This is a portfolio website that I created to showcase my projects and skills. I
 
 ## Getting Started
 
+Did not want to waste too much of my time, designing and developing a website from scratch, so I used a base template from the internet, and being very skilled with web development and web design, i easily inspected my key places, modified and customized it to my liking.
+
 ### Dependencies
 
-*
+HTML > CSS > JS > DOCKER > NGINX (Basic Dev Tools)
