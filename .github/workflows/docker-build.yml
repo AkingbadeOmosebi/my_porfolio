@@ -27,5 +27,5 @@ jobs:
         uses: docker/build-push-action@v4  # v4 is stable and less problematic than v5
         with:
           context: .
-          push: true       # boolean, no quotes, lowercase
+          push: TRUE       # boolean, no quotes, lowercase
           tags: ghcr.io/${{ github.repository }}:latest
