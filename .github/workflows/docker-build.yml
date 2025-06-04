@@ -17,6 +17,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Generate lowercased image repository path
+      id: image_vars # Give an ID to this step to reference its outputs
+      run: |
+        # Converts "OWNER/REPO_NAME" to "owner/repo_name"
+        # The result is set as an output variable 'image_path' for this step
+        echo "image_path=$(echo '${{ github.repository }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
 
@@ -27,14 +34,14 @@ jobs:
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
 
-    # Optional: Add this step to debug the generated tag
-    - name: Debug image tag
-      run: echo "Attempting to use tag: ghcr.io/${{ toLowerCase(github.repository) }}:latest"
+    - name: Debug image tag construction
+      # This step will print the exact tag being used, allowing you to verify it's lowercase
+      run: echo "Full image tag will be: ghcr.io/${{ steps.image_vars.outputs.image_path }}:latest"
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
         context: .
         push: true
-        # Correctly convert the entire repository path (owner/repo_name) to lowercase
-        tags: ghcr.io/${{ toLowerCase(github.repository) }}:latest
+        # Use the output from the 'image_vars' step
+        tags: ghcr.io/${{ steps.image_vars.outputs.image_path }}:latest
