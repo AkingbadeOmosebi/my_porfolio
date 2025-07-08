@@ -208,3 +208,25 @@ resource "aws_ecs_cluster" "portfolio_cluster" {
 }
 
 
+# So, i need two things, aws_iam_role and aws_iam_role_policy_attachment for my ECS task execution role.
+
+resource "aws_iam_role" "ecs_task_execution_role" {
+  name = "ecs-task-execution-role"
+  assume_role_policy = jsonencode({    # Terraform's "jsonencode" function converts a Terraform expression result to valid JSON syntax. you can get moore of this templates on terraform registry docs site like i did here.
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = "sts:AssumeRole"
+        Effect = "Allow"
+        Sid    = ""
+        Principal = {
+          Service = "ecs-tasks.amazonaws.com"       # You must specific the service type!!! This is the service that will assume this role, in my case, it is the ECS tasks. Read more on it.
+        }
+      },
+    ]
+  })
+
+  tags = {
+    name = "ecs-task-execution-role"
+  }
+}
