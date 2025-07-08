@@ -27,12 +27,25 @@ resource "aws_subnet" "subnet-3" {
 
 }
 
-resource "aws_ecr_repository" "my_portfolio" {
-  name                 = "my_portfolio"
-  image_tag_mutability = "MUTABLE" # or "IMMUTABLE" based on your requirement
-  image_scanning_configuration {
-    scan_on_push = true
+#My route table, so that my subnets can atleast access the internet
+resource "aws_route_table" "my_route_table" {
+  vpc_id = aws_vpc.my_vpc.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.my_igw.id
   }
+
+  tags = {
+    Name = "my-route-table"
+  }
+}
+
+# my subnet associations to the route table, selecting the subnets i want to have access to the internet. 
+resource "aws_route_table_association" "subnet_associations" {
+  count          = 3
+  subnet_id      = [aws_subnet.subnet-1.id, aws_subnet.subnet-2.id, aws_subnet.subnet-3.id][count.index]
+  route_table_id = aws_route_table.my_route_table.id
 }
 
 # Myy internet gateway
@@ -97,6 +110,16 @@ resource "aws_security_group" "ecs_tasks_sg" {
   }
 }
 
+# My ECR repository for my_portfolio project
+resource "aws_ecr_repository" "my_portfolio" {
+  name                 = "my_portfolio"
+  image_tag_mutability = "MUTABLE" # or "IMMUTABLE" based on your requirement
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+}
+
+# My ECR lifecycle policy, policy to keep only the one or the latest image and delete any other.
 resource "aws_ecr_lifecycle_policy" "my_portfolio_ecr_policy" {
   repository = aws_ecr_repository.my_portfolio.name
 
