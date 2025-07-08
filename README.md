@@ -8,29 +8,29 @@ Here is the tree structure of this repo mapped out by me for you, because I am k
 
 👇👇👇
 
-My_Porfolio/
-│
-├── 🐳 Dockerfile # Docker configuration for containerizing the app
-├── 🚫 .dockerignore # Files/folders to exclude from Docker build context
-├── 📚 README.md # Project overview and instructions
-│
-├── 🌍 terraform/ # All Infrastructure as Code (IaC) files
-│ ├── 🏗️ main.tf # Main Terraform config (or split into modules)
-│ ├── 🔧 provider.tf # Terraform provider settings
-│ ├── 🌐 vpc.tf # VPC and networking resources
-│ ├── 🛡️ security.tf # Security groups and IAM roles
-│ ├── 🚢 ecs.tf # ECS cluster, services, task definitions
-│ ├── 📦 ecr.tf # ECR repository and lifecycle policies
-│ ├── 🔐 iam.tf # IAM roles and policies
-│ ├── 🔄 workflows/ # GitHub Actions workflow files for CI/CD
-│ └── 📁 assets/ # Terraform related static files or templates (if any)
-│
-├── 🌟 index.html # Your portfolio website HTML entry point
-├── 🎨 assets/ # Frontend assets: css, js, images, etc.
-│ ├── 💅 css/
-│ ├── 💻 js/
-│ └── 🖼️ images/
-└── 🚫 .gitignore # Git ignore rules
+📂 my_portfolio_project 😎🚀
+├── 📁 assets 🎨
+│   ├── 📁 css 💅
+│   ├── 📁 images 🖼️
+│   └── 📁 js 💻
+├── 📁 terraform 🌍
+│   ├── 🗂️ ecr.tf 📦
+│   ├── 🗂️ ecs.tf 🚢
+│   ├── 🗂️ iam.tf 🔐
+│   ├── 🗂️ main.tf 🏗️
+│   ├── 🗂️ provider.tf 🔧
+│   ├── 🗂️ security.tf 🛡️
+│   ├── 🗂️ vpc.tf 🌐
+│   ├── 📁 .github 🤖
+│   ├── 🔒 .terraform.lock.hcl
+│   └── 🗃️ .terraform/
+├── 🐳 Dockerfile 🐋
+├── 📄 .dockerignore 🚫🐳
+├── 📄 index.html 🌟
+├── 📄 README.md 📚
+└── 🛠️ workflows/ 🔄
+
+Keep it neat, keep it tight! 💪😄
 
 
 ---
