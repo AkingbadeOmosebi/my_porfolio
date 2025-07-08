@@ -268,3 +268,23 @@ resource "aws_ecs_task_definition" "portfolio_task" {
     Name = "portfolio-task"
   }
 }
+
+# Alright, so i am almost done, and here is where i add my service for my ecs and the amount i want running at all times.
+
+resource "aws_ecs_service" "portfolio_service" {
+  name            = "portfolio-service"
+  cluster         = aws_ecs_cluster.portfolio_cluster.id
+  task_definition = aws_ecs_task_definition.portfolio_task.arn
+  launch_type     = "FARGATE"
+  desired_count   = 1       # Personally id like to think of this as replicas with self heaaling in k8s or kubernetes. You can set to the miniumum about you  want to keep up and running at al times!!
+
+  network_configuration {
+    subnets         = [aws_subnet.subnet-1.id, aws_subnet.subnet-2.id]
+    security_groups = [aws_security_group.ecs_tasks_sg.id]
+    assign_public_ip = true
+  }
+
+  tags = {
+    Name = "portfolio-service"
+  }
+}
