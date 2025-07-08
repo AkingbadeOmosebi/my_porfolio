@@ -3,6 +3,11 @@ resource "aws_vpc" "my_vpc" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
 
+  tags = {
+    Name        = "my-vpc"
+    Project     = "my_portfolio"
+    Environment = "dev"
+  }
 }
 
 # My 3 subnets
@@ -11,6 +16,11 @@ resource "aws_subnet" "subnet-1" {
   cidr_block        = "10.0.1.0/24"
   availability_zone = "eu-central-1a" # my zone a subnet
 
+  tags = {
+    Name        = "subnet-1a"
+    Project     = "my_portfolio"
+    Environment = "dev"
+  }
 }
 
 resource "aws_subnet" "subnet-2" {
@@ -18,6 +28,11 @@ resource "aws_subnet" "subnet-2" {
   cidr_block        = "10.0.2.0/24"
   availability_zone = "eu-central-1b" # my zone b subnet
 
+  tags = {
+    Name        = "subnet-1b"
+    Project     = "my_portfolio"
+    Environment = "dev"
+  }
 }
 
 resource "aws_subnet" "subnet-3" {
@@ -25,6 +40,11 @@ resource "aws_subnet" "subnet-3" {
   cidr_block        = "10.0.3.0/24"
   availability_zone = "eu-central-1c" # my zone c subnet
 
+  tags = {
+    Name        = "subnet-1c"
+    Project     = "my_portfolio"
+    Environment = "dev"
+  }
 }
 
 #My route table, so that my subnets can atleast access the internet
@@ -37,7 +57,9 @@ resource "aws_route_table" "my_route_table" {
   }
 
   tags = {
-    Name = "my-route-table"
+    Name        = "my-route-table"
+    Project     = "my_portfolio"
+    Environment = "dev"
   }
 }
 
@@ -51,8 +73,13 @@ resource "aws_route_table_association" "subnet_associations" {
 # Myy internet gateway
 resource "aws_internet_gateway" "my_igw" {
   vpc_id = aws_vpc.my_vpc.id
-}
 
+  tags = {
+    Name        = "my-igw"
+    Project     = "my_portfolio"
+    Environment = "dev"
+  }
+}
 
 # My Security group mainly for my ECS tasks
 resource "aws_security_group" "ecs_tasks_sg" {
@@ -106,7 +133,9 @@ resource "aws_security_group" "ecs_tasks_sg" {
   }
 
   tags = {
-    Name = "ecs-tasks-sg"
+    Name        = "ecs-tasks-sg"
+    Project     = "my_portfolio"
+    Environment = "dev"
   }
 }
 
@@ -116,6 +145,12 @@ resource "aws_ecr_repository" "my_portfolio" {
   image_tag_mutability = "MUTABLE" # or "IMMUTABLE" based on your requirement
   image_scanning_configuration {
     scan_on_push = true
+  }
+
+  tags = {
+    Name        = "my-portfolio-ecr"
+    Project     = "my_portfolio"
+    Environment = "dev"
   }
 }
 
