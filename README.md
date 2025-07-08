@@ -41,7 +41,7 @@ Keep it neat, keep it tight! 💪😄
 
 - Fully customized front-end crafted with HTML, CSS, and JavaScript  
 - Dockerized container running on Nginx  
-- Infrastructure as Code using Terraform  
+- Infrastructure as Code using Terraform to provision AWS VPC, SECURITY, IAM, ECR, ECS
 - Automated deployment via Spacelift pipeline  
 
 ---
