@@ -71,28 +71,18 @@ Here are some screenshots of the app running:
 
 ### Outputs
 ![outputs1](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/output1.png)
-![outputs2](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/output2.png)
-![output3](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/output3.png)
 
 ### AWS-ECS-Clusters
-![ECS](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/cluster1.png)
-![ECS2](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/service_task.png)
 ![ECS3](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Cluster2.png)
 
 ### AWS-ECS-Task Definitions
-![ECS](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/td1.png)
-![ECS2](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/td2.png)
 ![ECS3](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/td3.png)
 
 ### AWS-ECR
 ![ECR](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/docker_ecr.png)
-![ECR](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/ecr_img.png)
 
 ### Spacelift Terraform IaC CI-CD
-![spacelift1](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Spacelift.png)
-![spacelift2](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/spacelift_final.png)
 ![spacelift3](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/spacelift_3.png)
-
 
 
 
