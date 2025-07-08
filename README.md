@@ -8,6 +8,7 @@ Here is the tree structure of this repo mapped out by me for you, because I am k
 
 👇👇👇
 
+```
 📂 my_portfolio_project 😎🚀
 ├── 📁 assets 🎨
 │   ├── 📁 css 💅
@@ -29,6 +30,7 @@ Here is the tree structure of this repo mapped out by me for you, because I am k
 ├── 📄 index.html 🌟
 ├── 📄 README.md 📚
 └── 🛠️ workflows/ 🔄
+```
 
 Keep it neat, keep it tight! 💪😄
 
