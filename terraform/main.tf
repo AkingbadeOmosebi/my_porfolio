@@ -114,7 +114,7 @@ resource "aws_security_group" "ecs_tasks_sg" {
     description = "HTTPS access"
   }
 
-  # Allow My_portfolio application port (This one can be adjust as needed, for example if u map your container to 3000, then 3000 it is).
+  # Allowin My_portfolio application port (This one can be adjust as needed, for example if u map your container to 3000, then 3000 it is).
   ingress {
     from_port   = 5000
     to_port     = 5000
@@ -123,7 +123,7 @@ resource "aws_security_group" "ecs_tasks_sg" {
     description = "Application port"
   }
 
-  # Allow all outbound traffic
+  #will Allow all outbound traffic
   egress {
     from_port   = 0
     to_port     = 0
@@ -189,3 +189,22 @@ resource "aws_ecr_lifecycle_policy" "my_portfolio_ecr_policy" {
 }
 EOF
 }
+
+
+# Time for me to crreate my ECS cluster and its services
+resource "aws_ecs_cluster" "portfolio_cluster" {
+  name = "portfolio-cluster"
+
+  setting {
+    name  = "containerInsights"
+    value = "enabled"
+  }
+
+  tags = {
+    name = "portfolio-cluster"
+    Project     = "my_portfolio"
+    Environment = "dev"
+  }
+}
+
+
