@@ -70,20 +70,30 @@ Here are some preview.
 Here are some screenshots of the app running:
 
 ### Outputs
-![outputs1](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/output1.png)
+![outputs1](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Output1.png)
+![outputs2](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Output2.png)
+![output3](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Output3.png)
 
 ### AWS-ECS-Clusters
+![ECS](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Cluster1.png)
+![ECS2](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Service_Task.png)
 ![ECS3](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Cluster2.png)
 
 ### AWS-ECS-Task Definitions
+![ECS](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/TD1.png)
+![ECS2](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/TD2.png)
 ![ECS3](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/td3.png)
 
 ### AWS-ECR
-![ECR](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/docker_ecr.png)
+![ECR](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Docker_ECR.png)
+![ECR](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/ECR_IMG.png)
 
 ### Spacelift Terraform IaC CI-CD
+![spacelift1](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Spacelift.png)
+![spacelift2](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Spacelift_final.png)
 ![spacelift3](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/spacelift_3.png)
 
 
 
-Hope you enjoyed. 
+
+Hope you enjoyed. 😎
