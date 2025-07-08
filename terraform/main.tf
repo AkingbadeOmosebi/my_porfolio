@@ -238,3 +238,33 @@ resource "aws_iam_role_policy_attachment" "ecs_task_execution_role_policy" {
   role       = aws_iam_role.ecs_task_execution_role.name
   policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
 }
+
+
+# now its time for taask definiinnition, you can find this basic example on terraform registry docs as i did, then read and modify it as you need it.
+
+resource "aws_ecs_task_definition" "portfolio_task" {
+  family                   = "portfolio-task"
+  network_mode             = "awsvpc"
+  requires_compatibilities = ["FARGATE"]
+  cpu                      = "256"
+  memory                   = "512"
+  execution_role_arn       = aws_iam_role.ecs_task_execution_role.arn
+
+  container_definitions = jsonencode([
+    {
+      name      = "portfolio-container"
+      image     = "my_portfolio:latest"
+      essential = true
+      portMappings = [
+        {
+          containerPort = 80
+          hostPort      = 80
+        }
+      ]
+    }
+  ])
+
+  tags = {
+    Name = "portfolio-task"
+  }
+}
