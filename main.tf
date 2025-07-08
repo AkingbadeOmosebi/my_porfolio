@@ -1,4 +1,4 @@
-#This is your standard provider block from registry.terraform docs
+#This is your standard provider block from registry.terraform docs.
 
 terraform {
   required_providers {
