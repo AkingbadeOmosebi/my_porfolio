@@ -167,7 +167,7 @@ resource "aws_ecr_lifecycle_policy" "my_portfolio_ecr_policy" {
       "selection": {
         "tagStatus": "untagged",
         "countType": "imageCountMoreThan",
-        "countNumber": 0
+        "countNumber": 1
       },
       "action": {
         "type": "expire"
