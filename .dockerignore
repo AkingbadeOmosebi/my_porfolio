@@ -1,0 +1,18 @@
+# Ignore Git metadata
+.git
+
+# Ignore GitHub workflows and config
+.github
+
+# Ignore Terraform infrastructure code
+terraform
+
+# Ignore documentation and config files not needed in container
+README.md
+Dockerfile
+.dockerignore
+workflows
+
+# Optional: ignore logs and env files iif any
+*.log
+*.env
