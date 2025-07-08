@@ -123,20 +123,22 @@ resource "aws_ecr_repository" "my_portfolio" {
 resource "aws_ecr_lifecycle_policy" "my_portfolio_ecr_policy" {
   repository = aws_ecr_repository.my_portfolio.name
 
-  policy = jsonencode({
-    rules = [
-      {
-        rule_priority = 1
-        description   = "Keep only 1 image max"
-        selection = {
-          count_type   = "imageCountMoreThan"
-          count_number = 1
-          tag_status   = "any"
+  policy = <<EOF
+{
+    "rules": [
+        {
+            "rulePriority": 1,
+            "description": "Keep only 1 image max",
+            "selection": {
+                "tagStatus": "any",
+                "countType": "imageCountMoreThan",
+                "countNumber": 1
+            },
+            "action": {
+                "type": "expire"
+            }
         }
-        action = {
-          type = "expire"
-        }
-      }
     ]
-  })
+}
+EOF
 }
