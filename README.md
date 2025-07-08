@@ -62,3 +62,37 @@ HTML | CSS | JavaScript | Docker | Nginx | AWS ECR | AWS ECS | Terraform | Space
 
 In the near future, expect more fun features and styles coming to this app... Stay tuned! 😄✨
 
+
+Here are some preview.
+
+## App Preview
+
+Here are some screenshots of the app running:
+
+### Outputs
+![outputs1 ](assets/screenshots/output1.png)
+![outputs2 ](assets/screenshots/output2.png)
+![output3 ](assets/screenshots/output3.png)
+
+### AWS-ECS-Clusters
+![ECS ](assets/screenshots/cluster1.png)
+![ECS2 ](assets/screenshots/service_task.png)
+![ECS3 ](assets/screenshots/Cluster2.png)
+
+### AWS-ECS-Task Definitions
+![ECS ](assets/screenshots/td1.png)
+![ECS2 ](assets/screenshots/td2.png)
+![ECS3 ](assets/screenshots/td3.png)
+
+
+### AWS-ECR
+![ECR ](assets/screenshots/docker_ecr.png)
+![ECR ](assets/screenshots/ecr_img.png)
+
+### Spacelift Terraform IaC CI-CD
+![spacelift1](assets/screenshots/Spacelift.png)
+![spacelift2](assets/screenshots/spacelift_final.png)
+![spacelift3](assets/screenshots/spacelift_3.png)
+
+
+Hope you enjoyed. 
