@@ -161,8 +161,20 @@ resource "aws_ecr_lifecycle_policy" "my_portfolio_ecr_policy" {
   policy = <<EOF
 {
     "rules": [
+         {
+      "rulePriority": 1,
+      "description": "Expire untagged images",
+      "selection": {
+        "tagStatus": "untagged",
+        "countType": "imageCountMoreThan",
+        "countNumber": 0
+      },
+      "action": {
+        "type": "expire"
+      }
+    },
         {
-            "rulePriority": 1,
+            "rulePriority": 2,
             "description": "Keep only 1 image max",
             "selection": {
                 "tagStatus": "any",
