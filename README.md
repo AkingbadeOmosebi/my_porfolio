@@ -64,7 +64,7 @@ In the near future, expect more fun features and styles coming to this app... St
 
 
 ## Architectural diagram
-![Architect](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Architectural Diagram.png)
+![Architect](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Architectural_Diagram.png)
 
 Here are some preview.
 
