@@ -63,6 +63,9 @@ HTML | CSS | JavaScript | Docker | Nginx | AWS ECR | AWS ECS | Terraform | Space
 In the near future, expect more fun features and styles coming to this app... Stay tuned! 😄✨
 
 
+## Architectural diagram
+![Architect](https://raw.githubusercontent.com/AkingbadeOmosebi/My_Porfolio/main/assets/screenshots/Architectural Diagram.png)
+
 Here are some preview.
 
 ## App Preview
